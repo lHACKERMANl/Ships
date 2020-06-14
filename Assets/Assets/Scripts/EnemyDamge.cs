@@ -34,6 +34,7 @@ public class EnemyDamge : DamgeScript
         {
             life -= damage;
         }
+        LoseHeartCheck();
         if(life <= 0)
         {
             gameOver.enabled = true;
@@ -48,7 +49,7 @@ public class EnemyDamge : DamgeScript
         gameObject.tag = "Player";
     }
 
-    void FixedUpdate()
+    void LoseHeartCheck()
     {
         for(int i=0;i<hearts.Length;i++)
         {

@@ -19,20 +19,24 @@ public class EnemyDamge : DamgeScript
         {
             life -= 50;
             hpCount--;
+            LoseHeartCheck();
         }
         if(other.gameObject.tag == "EnemyMid")
         {
             life -= 100;
-            hpCount = hpCount - 2;
+            hpCount =- 2;
+            LoseHeartCheck();
         }
         if(other.gameObject.tag == "EnemyHard")
         {
             life -= 150;
-            hpCount = hpCount - 3;
+            hpCount =- 3;
+            LoseHeartCheck();
         }
         if(other.gameObject.tag == "Enemy")
         {
             life -= damage;
+            LoseHeartCheck();
         }
         if(life <= 0)
         {
@@ -48,7 +52,7 @@ public class EnemyDamge : DamgeScript
         gameObject.tag = "Player";
     }
 
-    void FixedUpdate()
+    void LoseHeartCheck()
     {
         for(int i=0;i<hearts.Length;i++)
         {

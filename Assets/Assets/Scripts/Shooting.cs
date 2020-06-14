@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,7 +31,7 @@ public class Shooting : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1"))
         {
             curAmmo--;
             GameObject ball = Shoot();
