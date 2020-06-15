@@ -7,7 +7,7 @@ public class Restart : MonoBehaviour
 {
     public void RestartLvl()
     {
-	Generator.scorVal = 0;
+	    Generator.scorVal = 0;
         SceneManager.LoadScene("SampleScene");
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Generator : MonoBehaviour
 {
-    public GameObject enemyEz, enemyMid, enemyHard;
-    float rand1, rand2, rangeX, rangeY;
-    Vector2 spawnPoint;
-    [SerializeField] public float spawnRate = 6f;
-    float nextSpawn = 0.0f;
-    public Camera cam;
+    [SerializeField] private GameObject enemyEz, enemyMid, enemyHard;
+    [SerializeField] private float rand1, rand2, rangeX, rangeY;
+    [SerializeField] private Vector2 spawnPoint;
+    [SerializeField] private float spawnRate = 6f;
+    [SerializeField] private float nextSpawn = 0.0f;
+    [SerializeField] private Camera cam;
     public GameObject[] enemys;
 
     public static int scorVal = 0;
@@ -29,7 +29,7 @@ public class Generator : MonoBehaviour
         if(Time.time > nextSpawn)
         {
             nextSpawn = Time.time +spawnRate;
-            rangeX = RandomZone(-4.5f,-3.5f,3.5f,4.5f);
+            rangeX = RandomZone(-5f,-4f,4f,5f);
             rangeY = RandomZone(-3,2,2,3);
             spawnPoint = new Vector2 (rangeX, rangeY);
             Instantiate(enemys[Random.Range(0,3)], spawnPoint, Quaternion.identity);

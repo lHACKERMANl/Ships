@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject ballPrefab;
-    public float ballForce = 4.6f;
-    public int maxAmmo = 1;
-    int curAmmo = -1;
-    public float relodeTime = 0.8f;
-    bool isReloding = false;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject ballPrefab;
+    [SerializeField] private float ballForce = 4.6f;
+    [SerializeField] private int maxAmmo = 1;
+    [SerializeField] private int curAmmo = -1;
+    [SerializeField] private float relodeTime = 0.8f;
+    [SerializeField] private bool isReloding = false;
     // Start is called before the first frame update
     void Start()
     {

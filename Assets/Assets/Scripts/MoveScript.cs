@@ -5,11 +5,11 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour
 {
 
-    public float Speed = 2.5f;
-    public Rigidbody2D Phys;
-    private Vector2 movement;
-    private Vector2 mousePosit;
-    public Camera MouseCam;
+    [SerializeField] private float Speed = 2.5f;
+    [SerializeField] private Rigidbody2D Phys;
+    [SerializeField] private Vector2 movement;
+    [SerializeField] private Vector2 mousePosit;
+    [SerializeField] private Camera MouseCam;
 
     void Start()
     {
