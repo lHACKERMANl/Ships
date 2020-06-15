@@ -134,9 +134,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 100
   damage: 50
+  curSprite: {fileID: 2832234173083883712}
   hitEffect: {fileID: 584220904936816590, guid: 8ab44950d294b0640bafb72424179a0c,
     type: 3}
-  curSrite: {fileID: 2832234173083883712}
   newShip: {fileID: 21300000, guid: 3514c7592e23c6c4680bfe306d174a1c, type: 3}
   okShip: {fileID: 21300000, guid: 60354c34762a5b94ea7c8b370fde3d00, type: 3}
   shitShip: {fileID: 21300000, guid: 04264e5b8fa440a4abdec5fd735c208c, type: 3}

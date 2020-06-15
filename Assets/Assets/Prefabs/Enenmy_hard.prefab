@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3581145124955637267}
   - component: {fileID: 3581145124955637266}
   - component: {fileID: 3581145124955637265}
+  - component: {fileID: 3362422801699946053}
   - component: {fileID: 3581145124955637264}
   - component: {fileID: 3581145124955637262}
   m_Layer: 0
@@ -120,6 +121,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3362422801699946053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3581145124955637271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763d436c6d29b1740bf15a6d1ab4c1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 150
+  damage: 150
+  curSprite: {fileID: 3581145124955637267}
+  hitEffect: {fileID: 584220904936816590, guid: 8ab44950d294b0640bafb72424179a0c,
+    type: 3}
+  newShip: {fileID: 21300000, guid: 034a77f8a30cc3d4d831a6d8fa694a40, type: 3}
+  okShip: {fileID: 21300000, guid: 70d92b182dc00724b98b86cbb39fcd6e, type: 3}
+  shitShip: {fileID: 21300000, guid: 03a8c310db16f9b4b940e76979cc9afa, type: 3}
 --- !u!114 &3581145124955637264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,9 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 150
   damage: 50
+  curSprite: {fileID: 3581145124955637267}
   hitEffect: {fileID: 584220904936816590, guid: 8ab44950d294b0640bafb72424179a0c,
     type: 3}
-  curSrite: {fileID: 3581145124955637267}
   newShip: {fileID: 21300000, guid: 034a77f8a30cc3d4d831a6d8fa694a40, type: 3}
   okShip: {fileID: 21300000, guid: 70d92b182dc00724b98b86cbb39fcd6e, type: 3}
   shitShip: {fileID: 21300000, guid: 03a8c310db16f9b4b940e76979cc9afa, type: 3}

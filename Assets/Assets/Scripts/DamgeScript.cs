@@ -2,15 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamgeScript : MonoBehaviour
+public class DamgeScript : AbstractShip
 {
-    public float life = 50f;
-    public float damage = 50f;
-    public GameObject hitEffect;
-    public SpriteRenderer curSrite;
-    public Sprite newShip, okShip, shitShip;
-
-    void OnCollisionEnter2D(Collision2D other) 
+    public override void OnCollisionEnter2D(Collision2D other) 
     {
         if(other.gameObject.tag == "Player")
         {
@@ -18,22 +12,16 @@ public class DamgeScript : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        //gameObject.tag = "Enemy";
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(life == 150){
-            curSrite.sprite = newShip;
+            curSprite.sprite = newShip;
         }
         if(life <= 100){
-            curSrite.sprite = okShip;
+            curSprite.sprite = okShip;
         }
         if(life <= 50){
-            curSrite.sprite = shitShip;
+            curSprite.sprite = shitShip;
         }
         if(life <= 0){
             if(this.gameObject.tag == "EnemyEz") {Generator.scorVal += 10;}
